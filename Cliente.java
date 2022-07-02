@@ -6,7 +6,7 @@ public abstract class Cliente {
     protected  String nome;
     protected  String id;
     protected  int idade;
-    //protected Endereco end;
+    protected Endereco end;
 
 
 //Construtor usado para inicialização das variáveis
@@ -15,16 +15,17 @@ public abstract class Cliente {
       this.nome = novonome;
       this.id = novoid;
       this.idade = novaidade;
-      //end = novoend;
+      end = novoend;
     }
 //Metodo relatório usado para imprimir os dados do cliente
     public  void relatorio ()
     {
     	System.out.println("-------------------------");
-    	System.out.println("Cliente:");
-    	System.out.println("Nome:" +nome);
-    	System.out.println("Id:" +id);
-    	System.out.println("Idade:" +idade);
+    	System.out.println("Cliente: ");
+    	System.out.println("Nome: " +nome);
+    	System.out.println("Id: " +id);
+    	System.out.println("Idade: " +idade);
+        System.out.println("Endereço: "+end);
 
        
     }
