@@ -1,32 +1,19 @@
 package TrabalhoFinal_LP1;
 
 public class Fisica extends Cliente {
-
+	//Criação da variável para cliente fisico
 	private String cpf;
-	
+	//extesão da classe pai para receber os metodos criados lá
 	public Fisica(String novonome,String novoid, int novaidade, String cpf) {
 		super (novonome, novoid, novaidade);
 		this.cpf = cpf;
 	}
-	 public  void relatorio ()
-	    {
-	    	System.out.println("-------------------------");
-	    	System.out.println("Cliente:");
-	    	System.out.println("Nome:" +nome);
-	    	System.out.println("Id:" +id);
-	    	System.out.println("Idade:" +idade);
-	    	System.out.println("Cpf:" +cpf);
-	    	System.out.println("-------------------------");
-	       
-	    }
-	    @Override
-		public String toString() {
-			return  this.nome 
-					+ " | ID: " + this.id
-					+ " | Idade: " + this.idade
-					+ " | Cpf: " +this.cpf;
-		}
-	
-	
-	
+    //Override para puxar o metodo relatório da classe pai
+	@Override
+	public void relatorio() {
+		super.relatorio();
+		//Um simples print para poder imprimir o cpf do cliente
+		System.out.println("seu cpf: "+cpf);
+		System.out.println("-------------------------");
+	}
 }
