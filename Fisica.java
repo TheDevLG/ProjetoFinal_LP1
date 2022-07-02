@@ -4,17 +4,13 @@ public class Fisica extends Cliente {
 
 	private String cpf;
 	
-	public Fisica(String novonome,String novoid, int novaidade, String cpf) {
-		super (novonome, novoid, novaidade);
+	public Fisica(String novonome,String novoid, int novaidade, Endereco novoend, String cpf) {
+		super (novonome, novoid, novaidade, novoend);
 		this.cpf = cpf;
 	}
 	 public  void relatorio ()
 	    {
-	    	System.out.println("-------------------------");
-	    	System.out.println("Cliente:");
-	    	System.out.println("Nome:" +nome);
-	    	System.out.println("Id:" +id);
-	    	System.out.println("Idade:" +idade);
+	    	super.relatorio();
 	    	System.out.println("Cpf:" +cpf);
 	    	System.out.println("-------------------------");
 	       

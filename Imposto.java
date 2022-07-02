@@ -14,9 +14,9 @@ public abstract class Imposto {
 		this.codigo = codigo;
 		
 	}
-	public void relatorio() {
+	void relatorio() {
 		System.out.println("-------------------------");
-		System.out.println("Imposto Normal:");
+		System.out.println("Imposto:");
 		System.out.println("Valor:" +valor);
 		System.out.println("Descrição:" +descricao);
 		System.out.println("Código:" +codigo);
