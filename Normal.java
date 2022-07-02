@@ -2,18 +2,13 @@ package TrabalhoFinal_LP1;
 
 public class Normal extends Imposto {
 
-	public Normal(Cliente cliente, double valor, String descricao, int codigo) {
-		super (cliente, valor, descricao, codigo);
+	public Normal(Cliente cliente, double valor, String descricao, int codigo, Data data) {
+		super (cliente, valor, descricao, codigo, data);
 	}
 	
 	
 	public void relatorio() {
-		System.out.println("-------------------------");
-		System.out.println("Imposto Normal:");
-		System.out.println("Cliente:" +cliente);
-		System.out.println("Valor:" +valor);
-		System.out.println("Descrição:" +descricao);
-		System.out.println("Código:" +codigo);
+		super.relatorio();
 		System.out.println("-------------------------");
 		
 	}

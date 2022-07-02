@@ -40,8 +40,14 @@ public class Data {
             System.out.print(" / ");
             System.out.print(Mes);
             System.out.print(" / ");
-            System.out.print(Ano);
-
-
+            System.out.print(Ano + "\n");
+           
         }
+        @Override
+    	public String toString() {
+    		return  this.Dia 
+    				+ "/" + this.Mes
+    				+ "/" + this.Ano;
+    				
+    	}
     }

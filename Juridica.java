@@ -14,13 +14,8 @@ public class Juridica extends  Cliente{
         super.relatorio();
         //Um simples print para conseguir imprimir o cnpj do cliente
         System.out.println("seu cnpj: "+cnpj);
+        end.imprimirEnd();
         System.out.println("-------------------------");
     }
-    @Override
-  		public String toString() {
-  			return  this.nome 
-  					+ " | ID: " + this.id
-  					+ " | Idade: " + this.idade
-  					+ " | Cnpj: " +this.cnpj;
-  		}
+    
 }

@@ -13,16 +13,11 @@ public class Endereco {
 
   public void imprimirEnd(){
       System.out.println("-------------------------");
+      System.out.println("        Endereço         ");
       System.out.println("Logradouro: "+logradouro);
       System.out.println("Numero: " +numero);
       System.out.println("Cep: " +cep);
 
   }
-  @Override
-	public String toString() {
-		return  this.logradouro 
-				+ " | Numero: " + this.numero
-				+ " | CEP: " + this.cep;
-				
-	}
+  
 }

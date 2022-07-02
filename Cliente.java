@@ -20,20 +20,12 @@ public abstract class Cliente {
     public  void relatorio ()
     {
     	System.out.println("-------------------------");
-    	System.out.println("Cliente: ");
+    	System.out.println("         Cliente         ");
     	System.out.println("Nome: " +nome);
     	System.out.println("Id: " +id);
     	System.out.println("Idade: " +idade);
-        System.out.println("Endereço: "+end);
+       
        
     }
-    @Override
-	public String toString() {
-		return  this.nome 
-				+ " | ID: " + this.id
-				+ " | Idade: " + this.idade
-				+ " | Endereço: " + this.end;
-	}
-
 
 }

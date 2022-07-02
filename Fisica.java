@@ -12,17 +12,9 @@ public class Fisica extends Cliente {
 	    {
 	    	super.relatorio();
 	    	System.out.println("Cpf:" +cpf);
+	    	 end.imprimirEnd();
 	    	System.out.println("-------------------------");
 	       
 	    }
-	    @Override
-		public String toString() {
-			return  this.nome 
-					+ " | ID: " + this.id
-					+ " | Idade: " + this.idade
-					+ " | Cpf: " +this.cpf;
-		}
-	
-	
 	
 }
