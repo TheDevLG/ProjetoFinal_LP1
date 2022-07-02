@@ -2,7 +2,7 @@ package TrabalhoFinal_LP1;
 
 import java.util.Scanner;
 
-public class Data {
+public class Data{
    
 	private int Dia;
 	private String Mes;
