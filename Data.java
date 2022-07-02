@@ -14,26 +14,6 @@ public class Data{
       this.Ano = Ano;
 		
    } 
-   /*
-     Scanner entrada = new Scanner(System.in);     
-     //Método para o usuário dar o input nos dados
-        public void ReadData(){
-            do{
-                System.out.println("digite o dia");
-                Dia = entrada.nextInt();
-
-                System.out.println("digite o Mês por extenso ");
-                Mes = entrada.next();
-
-                System.out.println("digite o ano");
-                Ano = entrada.nextInt();
-                if(!(0<Dia<<32)  || Ano >2023||Ano<1000|| Mes.isEmpty()){
-                    System.out.println("ERRO!! Cheque as informações novamente");
-                }
-            }while(!(0<Dia<<32)  || Ano >2023|| Ano<1000 || Mes.isEmpty());
-
-        }
-        */
         //saída dos dados do usuário
         public void ImprimirData(){
             System.out.print(Dia);
@@ -43,11 +23,5 @@ public class Data{
             System.out.print(Ano + "\n");
            
         }
-        @Override
-    	public String toString() {
-    		return  this.Dia 
-    				+ "/" + this.Mes
-    				+ "/" + this.Ano;
-    				
-    	}
+       
     }
