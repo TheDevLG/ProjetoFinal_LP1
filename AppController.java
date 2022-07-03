@@ -44,13 +44,7 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
-	public void LoginImposto2(ActionEvent e) throws IOException {
-		raiz = FXMLLoader.load(getClass().getResource("CenaImposto2.fxml"));
-		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
-		Scene cena = new Scene(raiz);
-		janela.setScene(cena);
-		janela.show();
-	}
+
 	public void CenaInserir(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaInserir.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
