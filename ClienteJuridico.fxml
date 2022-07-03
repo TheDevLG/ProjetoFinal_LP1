@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrabalhoFinal_LP1.AppController">
+   <children>
+      <Label layoutX="31.0" layoutY="48.0" text="Preencha os dados requisitados">
+         <font>
+            <Font name="Franklin Gothic Medium" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NomeJ" layoutX="197.0" layoutY="149.0" prefHeight="25.0" prefWidth="255.0" />
+      <Label fx:id="NomeClienteJ" layoutX="25.0" layoutY="149.0" text="NOME:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="IdadeJ" layoutX="197.0" layoutY="219.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="CnpjJ" layoutX="197.0" layoutY="290.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="LogradouroJ" layoutX="197.0" layoutY="376.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="NumeroJ" layoutX="197.0" layoutY="445.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="CepJ" layoutX="197.0" layoutY="516.0" prefHeight="25.0" prefWidth="255.0" />
+      <Label fx:id="IdadeClienteJ" layoutX="25.0" layoutY="219.0" text="IDADE:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="CnpjClienteJ" layoutX="25.0" layoutY="289.0" text="CNPJ:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LogradouroClienteJ" layoutX="25.0" layoutY="375.0" text="LOGRADOURO:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="NumeroClienteJ" layoutX="25.0" layoutY="445.0" text="NÚMERO:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="CepClienteJ" layoutX="25.0" layoutY="515.0" text="CEP:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="99.0" text="Dados pessoais">
+         <font>
+            <Font name="Franklin Gothic Medium" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="331.0" text="Endereço">
+         <font>
+            <Font name="Franklin Gothic Medium" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogginButton1" layoutX="202.0" layoutY="572.0" mnemonicParsing="false" onAction="#LoginImposto" prefHeight="25.0" prefWidth="96.0" text="Entrar" />
+   </children>
+</AnchorPane>

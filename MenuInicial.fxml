@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrabalhoFinal_LP1.AppController">
+   <children>
+      <Label layoutX="61.0" layoutY="69.0" text="Olá, Seja Bem-Vindo!">
+         <font>
+            <Font name="Franklin Gothic Medium Cond" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="164.0" layoutY="254.0" text="Quer entrar de forma:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="FisicaButton" layoutX="61.0" layoutY="386.0" mnemonicParsing="false" onAction="#LoginFisico" prefHeight="35.0" prefWidth="124.0" text="Física" />
+      <Button fx:id="JuridicaButton" layoutX="316.0" layoutY="386.0" mnemonicParsing="false" onAction="#LoginJuridico" prefHeight="35.0" prefWidth="124.0" text="Jurídica" />
+   </children>
+</AnchorPane>
