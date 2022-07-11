@@ -1,10 +1,10 @@
 package TrabalhoFinal_LP1;
 
 public class Especial extends Imposto {
-	private double tempo;
+	private String tempo;
 
-public Especial(Cliente cliente, double valor, String descricao, int codigo, Data data, double tempo){
-	super (cliente, valor, descricao, codigo, data);
+public Especial(Cliente cliente, double valor, String descricao, Data data, String tempo){
+	super (cliente, valor, descricao, data);
 	this.tempo = tempo;
 }
 

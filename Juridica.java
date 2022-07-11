@@ -4,8 +4,8 @@ public class Juridica extends  Cliente{
     //Criação da variável cnpj para cliente juridico
     private String cnpj;
     //extensão da classe pai para receber os metodos criados lá
-    public Juridica(String novonome, String novoid, int novaidade, Endereco novoend, String cnpj) {
-        super(novonome, novoid, novaidade, novoend);
+    public Juridica(String novonome, int novaidade, Endereco novoend, String cnpj) {
+        super(novonome, novaidade, novoend);
         this.cnpj = cnpj;
     }
     //Override para puxar o metodo relatório da classe pai

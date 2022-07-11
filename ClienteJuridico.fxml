@@ -13,17 +13,17 @@
             <Font name="Franklin Gothic Medium" size="32.0" />
          </font>
       </Label>
-      <TextField fx:id="NomeJ" layoutX="197.0" layoutY="149.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="NomeF" layoutX="197.0" layoutY="149.0" prefHeight="25.0" prefWidth="255.0" />
       <Label fx:id="NomeClienteJ" layoutX="25.0" layoutY="149.0" text="NOME:">
          <font>
             <Font name="Arial Black" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="IdadeJ" layoutX="197.0" layoutY="219.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="IdadeF" layoutX="197.0" layoutY="219.0" prefHeight="25.0" prefWidth="255.0" />
       <TextField fx:id="CnpjJ" layoutX="197.0" layoutY="290.0" prefHeight="25.0" prefWidth="255.0" />
-      <TextField fx:id="LogradouroJ" layoutX="197.0" layoutY="376.0" prefHeight="25.0" prefWidth="255.0" />
-      <TextField fx:id="NumeroJ" layoutX="197.0" layoutY="445.0" prefHeight="25.0" prefWidth="255.0" />
-      <TextField fx:id="CepJ" layoutX="197.0" layoutY="516.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="LogradouroF" layoutX="197.0" layoutY="376.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="NumeroF" layoutX="197.0" layoutY="445.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="CepF" layoutX="197.0" layoutY="516.0" prefHeight="25.0" prefWidth="255.0" />
       <Label fx:id="IdadeClienteJ" layoutX="25.0" layoutY="219.0" text="IDADE:">
          <font>
             <Font name="Arial Black" size="18.0" />
@@ -59,6 +59,6 @@
             <Font name="Franklin Gothic Medium" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="LogginButton1" layoutX="202.0" layoutY="572.0" mnemonicParsing="false" onAction="#LoginImposto" prefHeight="25.0" prefWidth="96.0" text="Entrar" />
+      <Button fx:id="LogginButton1" layoutX="202.0" layoutY="572.0" mnemonicParsing="false" onAction="#LoginImposto1" prefHeight="25.0" prefWidth="96.0" text="Entrar" />
    </children>
 </AnchorPane>

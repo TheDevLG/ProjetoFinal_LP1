@@ -8,20 +8,17 @@ public abstract class Imposto {
 	protected int codigo;
 	protected Data data;
 	
-	public Imposto(Cliente cliente, double valor, String descricao, int codigo, Data data) {
+	public Imposto(Cliente cliente, double valor, String descricao, Data data) {
 		this.cliente = cliente;
 		this.valor = valor;
 		this.descricao = descricao;
-		this.codigo = codigo;
 		this.data = data;
 	}
 	void relatorio() {
 		System.out.println("-------------------------");
 		System.out.println("         Imposto         ");
-		cliente.relatorio();
 		System.out.println("Valor:" +valor);
 		System.out.println("Descrição:" +descricao);
-		System.out.println("Código:" +codigo);
 		data.ImprimirData();
 		
 		

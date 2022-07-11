@@ -3,16 +3,14 @@ package TrabalhoFinal_LP1;
 public abstract class Cliente {
     //Criação de variáveis
     protected  String nome;
-    protected  String id;
     protected  int idade;
     protected Endereco end;
 
 
 //Construtor usado para inicialização das variáveis
-    public  Cliente(String novonome,String novoid, int novaidade, Endereco novoend)
+    public  Cliente(String novonome, int novaidade, Endereco novoend)
     {
       this.nome = novonome;
-      this.id = novoid;
       this.idade = novaidade;
       this.end = novoend;
     }
@@ -22,7 +20,6 @@ public abstract class Cliente {
     	System.out.println("-------------------------");
     	System.out.println("         Cliente         ");
     	System.out.println("Nome: " +nome);
-    	System.out.println("Id: " +id);
     	System.out.println("Idade: " +idade);
        
        

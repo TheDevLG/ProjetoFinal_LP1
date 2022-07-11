@@ -4,8 +4,8 @@ public class Fisica extends Cliente {
 
 	private String cpf;
 	
-	public Fisica(String novonome,String novoid, int novaidade, Endereco novoend, String cpf) {
-		super (novonome, novoid, novaidade, novoend);
+	public Fisica(String novonome, int novaidade, Endereco novoend, String cpf) {
+		super (novonome, novaidade, novoend);
 		this.cpf = cpf;
 	}
 	 public  void relatorio ()
