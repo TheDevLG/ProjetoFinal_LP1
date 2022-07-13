@@ -2,19 +2,27 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrabalhoFinal_LP1.AppController">
    <children>
-      <Button fx:id="InserirButton" layoutX="187.0" layoutY="160.0" mnemonicParsing="false" onAction="#CenaInserir" prefHeight="54.0" prefWidth="125.0" text="Inserir" />
-      <Button layoutX="187.0" layoutY="270.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" text="Procurar" />
-      <Button layoutX="187.0" layoutY="380.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" text="Remover" />
-      <Button fx:id="RelatorioButton" layoutX="187.0" layoutY="490.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" text="Relatório" />
+      <ImageView fitHeight="650.0" fitWidth="672.0" layoutX="-60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../backcont.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="InserirButton" layoutX="187.0" layoutY="202.0" mnemonicParsing="false" onAction="#CenaInserir" prefHeight="54.0" prefWidth="125.0" text="Inserir" />
+      <Button layoutX="187.0" layoutY="323.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" text="Procurar" />
+      <Button layoutX="187.0" layoutY="449.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" text="Remover" />
       <Label layoutX="140.0" layoutY="50.0" text="O que deseja?">
          <font>
             <Font name="Franklin Gothic Medium" size="36.0" />
          </font>
       </Label>
+      <Pane layoutX="131.0" layoutY="47.0" prefHeight="48.0" prefWidth="234.0" />
    </children>
 </AnchorPane>

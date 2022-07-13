@@ -1,6 +1,7 @@
 package TrabalhoFinal_LP1;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -19,11 +21,11 @@ public class AppController {
 	private Parent raiz;
 	@FXML
 	private TextField NomeF, IdadeF, CpfF, LogradouroF, NumeroF, CepF, CnpjJ, ValorI, DescricaoI, TempoI, DiaI, MesI, AnoI;
-	private Fisica ClienteF;
-	private Juridica ClienteJ;
-	private Normal Imposto;
-	private Especial ImpostoE;
+	private Cliente Cliente;
 	
+	
+	Repositorio repositorio = new Repositorio();
+	@FXML
 	public void LoginFisico(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("ClienteFisico.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -31,6 +33,7 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
+	@FXML
 	public void LoginJuridico(ActionEvent e) throws IOException {
 	
 		raiz = FXMLLoader.load(getClass().getResource("ClienteJuridico.fxml"));
@@ -39,6 +42,7 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
+	@FXML
 	public void LoginImposto(ActionEvent e) throws IOException {
 		
 		String Nome = NomeF.getText();
@@ -50,14 +54,15 @@ public class AppController {
 		
 		Endereco endereco = new Endereco(Logra, Numero, Cep);
 		Fisica clienteF = new Fisica(Nome, Idade, endereco, Cpf );
-		this.ClienteF = clienteF;
+		this.Cliente = clienteF;
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
 		Scene cena = new Scene(raiz);
 		janela.setScene(cena);
 		janela.show();
-	
+		Cliente.relatorio();
 	}
+	@FXML
 	public void LoginImposto1(ActionEvent e) throws IOException {
 		
 		String Nome = NomeF.getText();
@@ -69,14 +74,15 @@ public class AppController {
 		
 		Endereco endereco = new Endereco(Logra, Numero, Cep);
 		Juridica clienteJ = new Juridica(Nome, Idade, endereco, Cnpj);
-		this.ClienteJ = clienteJ;
+		this.Cliente = clienteJ;
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
 		Scene cena = new Scene(raiz);
 		janela.setScene(cena);
 		janela.show();
-		ClienteJ.relatorio();
+		Cliente.relatorio();
 	}
+	@FXML
 	public void CenaInserir(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaInserir.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -84,7 +90,8 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
-	public void LoginImposto2(ActionEvent e) throws IOException {
+	@FXML
+	public void InserirImposto(ActionEvent e) throws IOException {
 		
 		double Valor = Integer.parseInt(ValorI.getText());
 		String Descricao = DescricaoI.getText();
@@ -93,30 +100,25 @@ public class AppController {
 		String Mes = MesI.getText();
 		int Ano = Integer.parseInt(AnoI.getText());
 		
-		
-		
 		Data Data = new Data(Dia, Mes, Ano);
-		Normal imposto = new Normal(ClienteF, Valor, Descricao, Data);
-		Especial impostoE = new Especial(ClienteF, Valor, Descricao, Data, Tempo);
-		Normal imposto1 = new Normal(ClienteJ, Valor, Descricao, Data);
-		Especial impostoE1 = new Especial(ClienteJ, Valor, Descricao, Data, Tempo);
+		Normal imposto = new Normal(Cliente, Valor, Descricao, Data);
+		Especial impostoE = new Especial(Cliente, Valor, Descricao, Data, Tempo);
+		
+		app.repositorio.adicionar(imposto);
+		
+		Alert confirmacao = new Alert(Alert.AlertType.INFORMATION);
+		confirmacao.setTitle("Inserido com sucesso");
+		confirmacao.setHeaderText("Confirmação!");
+		confirmacao.setContentText("Novo imposto inserido!");
+		confirmacao.showAndWait();
 		
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
 		Scene cena = new Scene(raiz);
 		janela.setScene(cena);
 		janela.show();
-		
-		this.Imposto = imposto;
-		this.Imposto = imposto1;
-		this.ImpostoE = impostoE;
-		this.ImpostoE = impostoE1;
-		
-		imposto.relatorio();
-		imposto1.relatorio();
-		impostoE.relatorio();
-		impostoE1.relatorio();
-	}	
+	}
+	@FXML
 	public void Voltar(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();

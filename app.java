@@ -10,6 +10,8 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class app extends Application {
+	
+	public static Repositorio repositorio;
 	@Override
 	public void start(Stage janela) {
 		try {
@@ -26,6 +28,9 @@ public class app extends Application {
 		}
 	}
 	public static void main(String[] args) {
+		
+		repositorio = new Repositorio();
+		
 		launch(args);
 	}
 }

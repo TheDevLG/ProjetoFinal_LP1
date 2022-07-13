@@ -48,7 +48,7 @@
             <Font name="Franklin Gothic Medium" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="InserirImpButton" layoutX="203.0" layoutY="567.0" mnemonicParsing="false" onAction="#LoginImposto2" prefHeight="25.0" prefWidth="96.0" text="Inserir" />
+      <Button fx:id="InserirImpButton" layoutX="203.0" layoutY="567.0" mnemonicParsing="false" onAction="#InserirImposto" prefHeight="25.0" prefWidth="96.0" text="Inserir" />
       <TextField fx:id="TempoI" layoutX="197.0" layoutY="264.0" prefHeight="25.0" prefWidth="255.0" />
       <Label fx:id="TempoImposto" layoutX="25.0" layoutY="264.0" text="TEMPO:">
          <font>

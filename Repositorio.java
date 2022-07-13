@@ -1,43 +1,22 @@
 package TrabalhoFinal_LP1;
+import java.util.ArrayList;
 
-public class Repositorio {	
-	 // é o repositório deste problema
-	    private int indice;
-	    private Imposto [] BD;
+public class Repositorio {
 
-	    public Repositorio(){ 
-	        BD = new Imposto[20]; 
-	        indice = 0;
-	    }
+	ArrayList<Imposto> ImpostoBD;
 
-	    public void inserir(Imposto c){ 
-	        BD[indice] = c;
-	        indice++;
-	    }
+	public Repositorio() {
+		ImpostoBD = new ArrayList<Imposto>();
 
-	    public void remover(Imposto c){ 
-	        for(int i = 0; i < indice; i++){ 
-	            if(BD[i] == c){ 
-	                BD[i] = BD[indice-1]; 
-	                BD[indice-1] = null; 
-	                indice--; 
-	            }
-	        }
-	    }
+	}
 
-	    public void procurar(Imposto c){ 
-	        for(int i = 0; i < indice; i++){ 
-	            if(BD[i] == c){ 
-	                c.relatorio(); 
-	            }
-	        }
-	    }
+	public void adicionar(Imposto imposto) {
+		if (imposto != null)
+			ImpostoBD.add(imposto);
+	}
 
-	   public void relatorio() {
-		  for(int i = 0; i < indice; i++) {
-			  BD[i].relatorio();
-		  }
-	   }
+	public ArrayList<Imposto> ImpostoRel() {
+		return ImpostoBD;
+	}
 
-	  
 }
