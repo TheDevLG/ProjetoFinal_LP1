@@ -14,6 +14,27 @@ public abstract class Cliente {
       this.idade = novaidade;
       this.end = novoend;
     }
+    public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	 public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	public Endereco getEnd() {
+		return end;
+	}
+	public void setEnd(Endereco end) {
+		this.end = end;
+	}
+		
 //Metodo relatório usado para imprimir os dados do cliente
     public  void relatorio ()
     {

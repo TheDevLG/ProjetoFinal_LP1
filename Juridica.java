@@ -8,6 +8,13 @@ public class Juridica extends  Cliente{
         super(novonome, novaidade, novoend);
         this.cnpj = cnpj;
     }
+	 public String getCnpj() {
+		return cnpj;
+	}
+
+	 public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
     //Override para puxar o metodo relatório da classe pai
     @Override
     public void relatorio() {
