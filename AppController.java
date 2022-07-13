@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,10 +21,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class AppController {
+public class AppController implements Initializable{
 
 	private Stage janela;
 	private Scene cena;
@@ -48,8 +50,8 @@ public class AppController {
 	
 	Repositorio repositorio = new Repositorio();
 	
-	
 	@FXML
+	//método de troca de cena caso a opção "Física" tenha sido escolhida
 	public void LoginFisico(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("ClienteFisico.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -57,7 +59,7 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
-	
+	//método idem ao anterior porém para a opção "Jurídica"
 	public void LoginJuridico(ActionEvent e) throws IOException {
 	
 		raiz = FXMLLoader.load(getClass().getResource("ClienteJuridico.fxml"));
@@ -66,7 +68,7 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
-	
+	//método para Receber os dados do Cliente Fisico e avançar para a tela Principal do programa
 	public void LoginImposto(ActionEvent e) throws IOException {
 		
 		Nome = NomeF.getText();
@@ -79,6 +81,13 @@ public class AppController {
 		Endereco endereco = new Endereco(Logra, Numero, Cep);
 		Fisica clienteF = new Fisica(Nome, Idade, endereco, Cpf );
 		Cliente = clienteF;
+		
+		Alert confirmacao = new Alert(Alert.AlertType.INFORMATION);
+		confirmacao.setTitle("Cadastro de Cliente");
+		confirmacao.setHeaderText("Confirmação");
+		confirmacao.setContentText("Novo cliente cadastrado!");
+		confirmacao.showAndWait();
+		
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
 		Scene cena = new Scene(raiz);
@@ -86,9 +95,8 @@ public class AppController {
 		janela.show();
 		
 	}
-	
+	//método idem ao anterior porém para o Juridico
 	public void LoginImposto1(ActionEvent e) throws IOException {
-		
 		
 		String Nome = NomeF.getText();
 		int Idade = Integer.parseInt(IdadeF.getText());
@@ -100,15 +108,21 @@ public class AppController {
 		Endereco endereco = new Endereco(Logra, Numero, Cep);
 		Juridica clienteJ = new Juridica(Nome, Idade, endereco, Cnpj);
 		Cliente = clienteJ;
+		
+		Alert confirmacao = new Alert(Alert.AlertType.INFORMATION);
+		confirmacao.setTitle("Cadastro de Cliente");
+		confirmacao.setHeaderText("Confirmação");
+		confirmacao.setContentText("Novo cliente cadastrado!");
+		confirmacao.showAndWait();
+		
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
 		Scene cena = new Scene(raiz);
 		janela.setScene(cena);
-		janela.show();
-		
-		
+		janela.show();	
 	}
 	
+	//método para mudança de tela caso a opção "Inserir seja escolhida"
 	public void CenaInserir(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaInserir.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -117,7 +131,7 @@ public class AppController {
 		janela.show();
 		
 	}
-	
+	//método para receber o Imposto e adicioná-lo ao ArrayList
 	public void InserirImposto(ActionEvent e) throws IOException {
 		
 		double Valor = Integer.parseInt(ValorI.getText());
@@ -148,6 +162,7 @@ public class AppController {
 		janela.show();
 	}
 	
+	//método para voltar ao menu principal sem executar ação alguma dentro das opções
 	public void Voltar(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaImposto.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -155,13 +170,15 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
-	public void ImpostoRel(ActionEvent e) throws IOException {
+	// método que leva à tela de relatório que está em conjunto com a função alterar
+	public void ImpostoRelatorio(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaRel.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
 		Scene cena = new Scene(raiz);
 		janela.setScene(cena);
 		janela.show();
 	}
+	//método que leva para a tela de remoção de Imposto
 	public void RemoverCena(ActionEvent e) throws IOException {
 		raiz = FXMLLoader.load(getClass().getResource("CenaRemover.fxml"));
 		janela = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -169,29 +186,7 @@ public class AppController {
 		janela.setScene(cena);
 		janela.show();
 	}
-	public void preencherTabela() {
-		ObservableList<Imposto> imposto = FXCollections.observableArrayList(new Repositorio().ImpostoRel());
-		ImpostoTA.setItems(imposto);
-	}
-	ObservableList<Imposto> obslistImposto  = FXCollections.observableArrayList(repositorio.ImpostoRel());
-	public void CompletaDados(ArrayList<Imposto> rep) {
-		ObservableList<Imposto> data = FXCollections.observableArrayList(rep);
-		//ObservableList<Imposto> data = FXCollections.observableArrayList(rep);
-		//CpfCnpj.setCellValueFactory(new PropertyValueFactory<>("Cpf/Cnpj"));
-		//ValorImp.setCellValueFactory(new PropertyValueFactory<>("Valor"));
-		//NomeImp.setCellValueFactory(new PropertyValueFactory<>("nome"));
-
-		// exibir o endereco na tabela
-		NomeImp.setCellValueFactory(campo -> new SimpleStringProperty(campo.getValue().getCliente().getNome()));
-		DescImp.setCellValueFactory(dado -> new SimpleStringProperty(dado.getValue().getDesc()));
-		ValorImp.setCellValueFactory(dado -> new SimpleStringProperty(String.valueOf(dado.getValue().getValor())));
-		DiaImp.setCellValueFactory(dado -> new SimpleStringProperty(String.valueOf(dado.getValue().getData().getDia())));
-		MesImp.setCellValueFactory(dado -> new SimpleStringProperty(dado.getValue().getData().getMes()));
-		AnoImp.setCellValueFactory(dado -> new SimpleStringProperty(String.valueOf(dado.getValue().getData().getAno())));
-		
-
-		preencherTabela();
-	}
+	//método para fazer a busca
 	public void BuscarImp(ActionEvent e) {
 		if(CampoPesquisa.getText().equals("")) {
 			CompletaDados(app.repositorio.ImpostoRel());
@@ -204,6 +199,24 @@ public class AppController {
 				CompletaDados(Pesquisa);
 		}
 	}
+	//método para preencher as células da tabela (com defeitos)
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+
+	}
+	public void CompletaDados(ArrayList<Imposto> rep) {
+		ObservableList<Imposto> data = FXCollections.observableArrayList(rep);
+	
+		NomeImp.setCellValueFactory(campo -> new SimpleStringProperty(campo.getValue().getCliente().getNome()));
+		DescImp.setCellValueFactory(campo -> new SimpleStringProperty(campo.getValue().getDesc()));
+		ValorImp.setCellValueFactory(campo -> new SimpleStringProperty(String.valueOf(campo.getValue().getValor())));
+		DiaImp.setCellValueFactory(campo -> new SimpleStringProperty(String.valueOf(campo.getValue().getData().getDia())));
+		MesImp.setCellValueFactory(campo -> new SimpleStringProperty(campo.getValue().getData().getMes()));
+		AnoImp.setCellValueFactory(campo -> new SimpleStringProperty(String.valueOf(campo.getValue().getData().getAno())));
+		
+		ImpostoTA.setItems(data);
+	}
+	//método para preencher os text fields com as informações atuais do imposto selecionado para que possam ser alteradas
 	public void PreencherCampos(MouseEvent e) { 
 		int i = ImpostoTA.getSelectionModel().getSelectedIndex();
 
@@ -217,7 +230,8 @@ public class AppController {
 		AnoAlt.setText(String.valueOf(imposto.getData().getAno()));
 
 	}
-	public void AlterarImp(ActionEvent event) { // altera os valores do objeto em questÃ£o #nn pode mudar cnpj#
+	//Altera de fato os valores do imposto selecionado
+	public void AlterarImp(ActionEvent event) { 
 
 		String Nome = NomeAlt.getText();
 		double valor = Double.parseDouble(ValorAlt.getText());

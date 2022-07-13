@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrabalhoFinal_LP1.AppController">
    <children>
       <Button fx:id="InserirButton" layoutX="187.0" layoutY="202.0" mnemonicParsing="false" onAction="#CenaInserir" prefHeight="54.0" prefWidth="125.0" text="Inserir" />
-      <Button fx:id="ProcurarButton" layoutX="187.0" layoutY="323.0" mnemonicParsing="false" onAction="#ImpostoRel" prefHeight="54.0" prefWidth="125.0" text="Procurar" />
+      <Button fx:id="ProcurarButton" layoutX="187.0" layoutY="323.0" mnemonicParsing="false" onAction="#ImpostoRelatorio" prefHeight="54.0" prefWidth="125.0" text="Procurar" />
       <Button fx:id="CenaRemover" layoutX="187.0" layoutY="449.0" mnemonicParsing="false" onAction="#RemoverCena" prefHeight="54.0" prefWidth="125.0" text="Remover" />
       <Label layoutX="140.0" layoutY="50.0" text="O que deseja?">
          <font>

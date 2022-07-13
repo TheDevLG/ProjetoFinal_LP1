@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -16,10 +17,9 @@ public class app extends Application {
 	public void start(Stage janela) {
 		try {
 			Parent raiz = FXMLLoader.load(getClass().getResource("MenuInicial.fxml"));
-			Scene cena = new Scene(raiz, Color.LIGHTBLUE);
+			Scene cena = new Scene(raiz);
 			janela.setScene(cena);
 			janela.setResizable(false);
-			//Image Back = new Image("backcont.jpeg");
 			Image Icone = new Image("icon.png");
 			janela.getIcons().add(Icone);
 			janela.setTitle("Seu Imposto");
