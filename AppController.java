@@ -25,6 +25,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+//Controlador Geral
 public class AppController implements Initializable{
 
 	private Stage janela;
