@@ -20,8 +20,8 @@ public class app extends Application {
 			Scene cena = new Scene(raiz);
 			janela.setScene(cena);
 			janela.setResizable(false);
-			Image Icone = new Image("icon.png");
-			janela.getIcons().add(Icone);
+			//Image Icone = new Image("icon.png");
+			//janela.getIcons().add(Icone);
 			janela.setTitle("Seu Imposto");
 			janela.show();
 		} catch(Exception e) {

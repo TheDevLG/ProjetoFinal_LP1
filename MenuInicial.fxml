@@ -2,31 +2,50 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DisplacementMap?>
-<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrabalhoFinal_LP1.AppController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" style="-fx-background-color: #fcf7d1#a9a17#e0e4ce;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrabalhoFinal_LP1.AppController">
    <children>
-      <Label layoutX="61.0" layoutY="69.0" text="Olá, Seja Bem-Vindo!">
+      <Label layoutX="140.0" layoutY="69.0" text="Seu Imposto">
          <font>
             <Font name="Franklin Gothic Medium Cond" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="164.0" layoutY="254.0" text="Quer entrar de forma:">
+      <Label layoutX="55.0" layoutY="235.0" text="De qual maneira deseja entrar?">
          <font>
-            <Font size="18.0" />
+            <Font size="27.0" />
          </font>
       </Label>
-      <Button fx:id="FisicaButton" layoutX="61.0" layoutY="386.0" mnemonicParsing="false" onAction="#LoginFisico" prefHeight="35.0" prefWidth="124.0" text="Física">
-         <effect>
-            <DisplacementMap>
-               <mapData>
-                  <FloatMap />
-               </mapData>
-            </DisplacementMap>
-         </effect></Button>
-      <Button fx:id="JuridicaButton" layoutX="316.0" layoutY="386.0" mnemonicParsing="false" onAction="#LoginJuridico" prefHeight="35.0" prefWidth="124.0" text="Jurídica" />
+      <Button fx:id="FisicaButton" layoutX="72.0" layoutY="394.0" mnemonicParsing="false" onAction="#LoginFisico" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #114b4b;" text="Física" textFill="WHITE" />
+      <Button fx:id="JuridicaButton" layoutX="268.0" layoutY="394.0" mnemonicParsing="false" onAction="#LoginJuridico" prefHeight="46.0" prefWidth="124.0" style="-fx-background-color: #114b4b;" text="Jurídica" textFill="WHITE" />
+      <Pane layoutX="-5.0" layoutY="-5.0" prefHeight="133.0" prefWidth="522.0" style="-fx-background-color: #114b4b;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="59.0" layoutX="418.0" layoutY="33.0">
+               <image>
+                  <Image url="@../../../../Desktop/TrabalhoFinal_LP1/icon.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="28.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Olá,">
+               <font>
+                  <Font name="Franklin Gothic Book" size="41.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="28.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja Bem vindo">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="186.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seu Imposto">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
