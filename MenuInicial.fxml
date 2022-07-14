@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -21,8 +22,14 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Button fx:id="FisicaButton" layoutX="72.0" layoutY="394.0" mnemonicParsing="false" onAction="#LoginFisico" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #114b4b;" text="Física" textFill="WHITE" />
-      <Button fx:id="JuridicaButton" layoutX="268.0" layoutY="394.0" mnemonicParsing="false" onAction="#LoginJuridico" prefHeight="46.0" prefWidth="124.0" style="-fx-background-color: #114b4b;" text="Jurídica" textFill="WHITE" />
+      <Button fx:id="FisicaButton" layoutX="72.0" layoutY="394.0" mnemonicParsing="false" onAction="#LoginFisico" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #114b4b;" text="Física" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="JuridicaButton" layoutX="299.0" layoutY="394.0" mnemonicParsing="false" onAction="#LoginJuridico" prefHeight="46.0" prefWidth="124.0" style="-fx-background-color: #114b4b;" text="Jurídica" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Pane layoutX="-5.0" layoutY="-5.0" prefHeight="133.0" prefWidth="522.0" style="-fx-background-color: #114b4b;">
          <children>
             <ImageView fitHeight="57.0" fitWidth="59.0" layoutX="418.0" layoutY="33.0">

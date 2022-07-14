@@ -12,16 +12,25 @@
    <children>
       <ImageView fitHeight="233.0" fitWidth="259.0" layoutX="121.0" layoutY="116.0">
          <image>
-            <Image url="@../../../../Desktop/TrabalhoFinal_LP1/icon.png" />
+            <Image url="@icon.png" />
          </image>
       </ImageView>
       <Button fx:id="InserirButton" layoutX="93.0" layoutY="381.0" mnemonicParsing="false" onAction="#CenaInserir" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b; -fx-border-radius: 50px;" text="Inserir" textFill="WHITE">
          <cursor>
-            <Cursor fx:constant="SE_RESIZE" />
+            <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="290.0" layoutY="381.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b;" text="Procurar" textFill="WHITE" />
-      <Button layoutX="93.0" layoutY="482.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b;" text="Remover" textFill="WHITE" />
-      <Button fx:id="RelatorioButton" layoutX="290.0" layoutY="482.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b;" text="Relatório" textFill="WHITE" />
+      <Button layoutX="290.0" layoutY="381.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b;" text="Procurar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="93.0" layoutY="482.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b;" text="Remover" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="RelatorioButton" layoutX="290.0" layoutY="482.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="125.0" style="-fx-background-color: #114b4b;" text="Relatório" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Label layoutX="133.0" layoutY="45.0" text="O que deseja?" textFill="#27191c">
          <font>
             <Font name="Franklin Gothic Medium" size="36.0" />
