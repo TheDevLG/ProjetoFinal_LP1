@@ -1,5 +1,5 @@
-Projeto da matÈria Linguagem de ProgramaÁ„o I
+<h1>Projeto da mat√©ria Linguagem de Programa√ß√£o I </h1>
 
-Nosso grupo abordar· o tema Contabilidade
+Nosso grupo abordar√° o tema Contabilidade
 
-Realizado por: Luiz Gustavo, Õcaro Rodrigues, Guilherme Calheira e Macello dos Santos
+Realizado por: Luiz Gustavo, √çcaro Rodrigues, Guilherme Calheira e Macello dos Santos
